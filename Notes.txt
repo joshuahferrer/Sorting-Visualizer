@@ -1,0 +1,9 @@
+Notes:
+main file:
+    - UI
+    - generates random array
+
+separate files for sorting algorithms 
+    --> separete into classes
+    --> main algorithm (runs and updates)
+    --> sorting algs inherit 
