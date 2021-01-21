@@ -12,7 +12,10 @@ import random
 def run_algorithm():
     global data
     print("Algorithm selected: " + algVar.get())
-    algorithms.bubble_sort(data, draw_data)
+    if algVar.get() == "Bubble Sort":
+        algorithms.bubble_sort(data, draw_data)
+    elif algVar.get() == "Selection Sort":
+        algorithms.selection_sort(data, draw_data)
 
 def change_algorithm(*args):
     print(algVar.get())
@@ -22,9 +25,9 @@ def random_array():
     # reset data array
     data = []
     # get random set of integers
-    for x in range(25):
+    for _ in range(25):
         data.append(random.randrange(0, 101))
-    draw_data(data,['blue' for x in range(len(data))])  # will color rects 'blue'
+    draw_data(data,['blue' for _ in range(len(data))])  # will color rects 'blue'
 
 def draw_data(data, colorArray):
     # clears the canvas and draws the new set of integers
@@ -68,8 +71,9 @@ data = []
 
 # Dictionary with algorithm options
 CHOICES = [
-    "Quick Sort",
     "Bubble Sort",
+    "Selection Sort",
+    "Quick Sort",
     "Heap Sort"
 ] 
 algVar.set("Choose Algorithm") # set the default value

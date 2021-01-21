@@ -3,7 +3,10 @@ main file:
     - UI
     - generates random array
 
-separate files for sorting algorithms 
-    --> separete into classes
-    --> main algorithm (runs and updates)
-    --> sorting algs inherit 
+separate file for sorting algorithms 
+    > separete into classes
+    > main algorithm (runs and updates)
+    > sorting algs inherit
+    > implement "run_algorithm" into switch-case
+        > map choice to integer value
+        > run function according to value
